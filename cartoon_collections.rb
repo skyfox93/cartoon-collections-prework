@@ -13,6 +13,8 @@ calls.any?{|word| word.length > 4}
 end
 
 def find_the_cheese(foods)
-cheese_types = ["cheddar", "gouda", "camembert"]
-foods.find {}
+  cheese_types = ["cheddar", "gouda", "camembert"]
+    foods.find do|food|
+      cheese_types.any?{|cheese|food==cheese}
+    end
 end
